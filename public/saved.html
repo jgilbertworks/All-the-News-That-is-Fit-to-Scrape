@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scrapping With Mongoose</title>
+    <style>
+        body {
+            color: black;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5vw;
+        }
+        #content {
+            display: grid;
+            grid-template-columns: repeat(8,1fr);
+            grid-template-rows: repeat(10,minmax(75px,auto));
+            /* grid-column-gap: 10px; */
+            /* grid-row-gap: 10px; */
+            max-width: 100%;
+            min-width: 360px;
+            margin:0 auto;
+        }
+        .one {
+            grid-column: 1/9;
+            background-color: black;
+        }
+        .two{
+            grid-column: 1/2;
+            grid-row: 2/9;
+        }
+        .three {
+            grid-column: 1/9;
+            grid-row: 2/9;
+        }
+        /* .four {
+            grid-column: 5/9;
+            grid-row: 2/9;
+        } */
+        .five {
+            grid-column: 1/9;
+            grid-row: 10/11;
+            background-color: black;
+        }
+        #notes {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            background-color: white;
+            padding:0px 100px 0px 100px;
+            margin-top: 30px;
+
+        }
+
+        #titleinput,
+        #bodyinput {
+            height: 50px;
+            width: 50%;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-bottom:20px;
+        }
+
+        #titleinput,
+        #bodyinput {
+            border: 1px solid lightgray;
+            justify-self: center;
+        }
+
+        .article-body {
+            background-color: white;
+            /* border: 1px solid black;   */
+        }
+
+        #scrape-button {
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: white;
+            width: 125px;
+            height: 50px;
+            overflow: hidden;
+            transition: .2s;
+        }
+
+        #scrape-button:hover {
+            background-color: orange;
+            opacity: .9;
+            transform: scale(1.2);
+        }
+
+        #savenote {
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: white;
+            width: 125px;
+            height: 50px;
+            overflow: hidden;
+            transition: .2s;
+            justify-self: center;
+        }
+
+        #savenote:hover {
+            background-color: orange;
+            opacity: .9;
+            transform: scale(1.2);
+        }
+        
+    </style>
+</head>
+<body>
+
+<div id="content">
+    <div class="one">1</div>
+    <!-- <div class="two">2</div> -->
+    <div class="three">
+        <h1>Saved Articles</h1>
+        <!-- <button id='delete-article'>delete</button> -->
+        <div id="articles">
+                <button id='delete-article'>delete</button>
+            <div id="notes">
+                    <button id='note-comment'>add note</button>
+            </div>
+        </div> 
+    </div>
+    <div class="four">
+        <!-- <div id="notes"></div> -->
+    </div>
+    <div class="five">5</div>
+</div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="app.js"></script>
+</html>
